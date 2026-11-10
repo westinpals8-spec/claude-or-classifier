@@ -1,0 +1,4 @@
+{
+  "weight_distilbert": 0.5,
+  "tfidf_model": "models/tfidf_tuned.joblib"
+}

@@ -1,0 +1,343 @@
+{
+  "ab_test": {
+    "n": 1170,
+    "macro_f1": {
+      "A_tfidf_tuned": 0.8464973128015051,
+      "B_distilbert": 0.8672034879917495,
+      "C_distilbert_plus_human_review_simulated": 0.9052665844356542
+    },
+    "subset_acc": {
+      "A_tfidf_tuned": 0.8145299145299145,
+      "B_distilbert": 0.8769230769230769,
+      "C_simulated": 0.917094017094017
+    },
+    "mcnemar": {
+      "distilbert_right_tfidf_wrong": 112,
+      "tfidf_right_distilbert_wrong": 39,
+      "p_value": 2.27145028360026e-09
+    },
+    "macro_f1_diff_bootstrap_95ci": [
+      0.0018485478483618617,
+      0.039382937783729095
+    ],
+    "escalation_rate": 0.06153846153846154,
+    "human_reviews_per_1000": 61.53846153846154
+  },
+  "cross_validation": {
+    "per_fold_macro_f1": {
+      "distilbert": {
+        "0": 0.882,
+        "1": 0.8636,
+        "2": 0.8785,
+        "3": 0.8937,
+        "4": 0.8843
+      },
+      "tfidf": {
+        "0": 0.8613,
+        "1": 0.8524,
+        "2": 0.8607,
+        "3": 0.8635,
+        "4": 0.8528
+      }
+    },
+    "mean_sd": {
+      "distilbert": [
+        0.8804389541348941,
+        0.010976041851505037
+      ],
+      "tfidf": [
+        0.8581511593160066,
+        0.005177061851754591
+      ]
+    },
+    "paired_t_test": {
+      "t": 5.812541323878047,
+      "p": 0.004360198571019183
+    },
+    "per_label_f1_mean": {
+      "problem_report_f1": {
+        "distilbert": 0.8964,
+        "tfidf": 0.8809
+      },
+      "feature_request_f1": {
+        "distilbert": 0.7878,
+        "tfidf": 0.7512
+      },
+      "irrelevant_f1": {
+        "distilbert": 0.9572,
+        "tfidf": 0.9423
+      }
+    },
+    "distilbert_best_epochs": [
+      3.0,
+      2.0,
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  "leave_one_app_out": {
+    "distilbert": {
+      "Garmin Connect": 0.8577,
+      "Huawei Health": 0.8412,
+      "Samsung Health": 0.8649
+    },
+    "tfidf": {
+      "Garmin Connect": 0.8132,
+      "Huawei Health": 0.8058,
+      "Samsung Health": 0.8373
+    }
+  },
+  "leave_one_app_out_feature_request_f1": {
+    "distilbert": {
+      "Garmin Connect": 0.6911,
+      "Huawei Health": 0.7109,
+      "Samsung Health": 0.7963
+    },
+    "tfidf": {
+      "Garmin Connect": 0.622,
+      "Huawei Health": 0.6545,
+      "Samsung Health": 0.7682
+    }
+  },
+  "error_analysis": {
+    "n_reviews": 5846,
+    "n_errors": 684,
+    "error_rate": 0.11700307902839549,
+    "categories": [
+      {
+        "category": "mixed_problem_and_request",
+        "reviews": 103,
+        "errors": 84,
+        "share_of_all_errors": 0.12280701754385964,
+        "error_rate_in_category": 0.8155339805825242
+      },
+      {
+        "category": "predicted_mixed_but_single",
+        "reviews": 99,
+        "errors": 99,
+        "share_of_all_errors": 0.14473684210526316,
+        "error_rate_in_category": 1.0
+      },
+      {
+        "category": "problem_vs_request_confusion",
+        "reviews": 243,
+        "errors": 243,
+        "share_of_all_errors": 0.35526315789473684,
+        "error_rate_in_category": 1.0
+      },
+      {
+        "category": "missed_problem_report",
+        "reviews": 202,
+        "errors": 202,
+        "share_of_all_errors": 0.2953216374269006,
+        "error_rate_in_category": 1.0
+      },
+      {
+        "category": "false_feature_request",
+        "reviews": 260,
+        "errors": 260,
+        "share_of_all_errors": 0.38011695906432746,
+        "error_rate_in_category": 1.0
+      },
+      {
+        "category": "missed_feature_request",
+        "reviews": 235,
+        "errors": 235,
+        "share_of_all_errors": 0.3435672514619883,
+        "error_rate_in_category": 1.0
+      },
+      {
+        "category": "very_short_<=3_words",
+        "reviews": 1002,
+        "errors": 27,
+        "share_of_all_errors": 0.039473684210526314,
+        "error_rate_in_category": 0.02694610778443114
+      },
+      {
+        "category": "long_>50_words",
+        "reviews": 582,
+        "errors": 133,
+        "share_of_all_errors": 0.19444444444444445,
+        "error_rate_in_category": 0.22852233676975944
+      },
+      {
+        "category": "emoji_or_non_english",
+        "reviews": 63,
+        "errors": 1,
+        "share_of_all_errors": 0.0014619883040935672,
+        "error_rate_in_category": 0.015873015873015872
+      },
+      {
+        "category": "confident_disagreement_both_models_(likely_label_noise)",
+        "reviews": 218,
+        "errors": 218,
+        "share_of_all_errors": 0.31871345029239767,
+        "error_rate_in_category": 1.0
+      }
+    ],
+    "error_rate_by_app": {
+      "Garmin Connect": 0.095,
+      "Huawei Health": 0.1510791366906475,
+      "Samsung Health": 0.10526315789473684
+    }
+  },
+  "calibration": {
+    "temperatures": {
+      "problem_report": 1.45,
+      "feature_request": 1.45,
+      "irrelevant": 1.35
+    },
+    "ece_oof_fold4": {
+      "before": 0.03478912280581745,
+      "after": 0.02385148255170537
+    },
+    "ece_test": {
+      "before": 0.048366911301059044,
+      "after": 0.02775219990592674
+    },
+    "test_macro_f1_after_scaling": 0.8672034879917495,
+    "test_escalation_rate_after_scaling": 0.08205128205128205
+  },
+  "ensemble": {
+    "weight_distilbert": 0.5,
+    "oof_macro_f1_by_weight": {
+      "1.0": 0.8809304292504501,
+      "0.9": 0.8834582612151983,
+      "0.8": 0.8867790521836101,
+      "0.7": 0.8881902328936584,
+      "0.6": 0.8886768034581171,
+      "0.5": 0.8914122979016219
+    },
+    "oof_fold_macro_f1_by_weight": {
+      "1.0": [
+        0.8847094107604687,
+        0.8624083508965036,
+        0.8795333168115222,
+        0.8928080258713796,
+        0.8859777305903753
+      ],
+      "0.9": [
+        0.8861810811063111,
+        0.8686390425630385,
+        0.8788167932468776,
+        0.8961706689901927,
+        0.888221320333965
+      ],
+      "0.8": [
+        0.8889474692418382,
+        0.8739954933982409,
+        0.8832138180856991,
+        0.8970081899282162,
+        0.8913869997596217
+      ],
+      "0.7": [
+        0.8912816925066241,
+        0.8751751247211214,
+        0.8858321858704529,
+        0.8986537120079721,
+        0.8911281568683714
+      ],
+      "0.6": [
+        0.8925316591377436,
+        0.8807170985756206,
+        0.8849064832206123,
+        0.8948230725338222,
+        0.8908976202054699
+      ],
+      "0.5": [
+        0.8955049838124495,
+        0.8854143330788095,
+        0.8849605244707822,
+        0.8997176358352906,
+        0.8918782459212181
+      ]
+    },
+    "test": {
+      "macro_f1": 0.8824306598077091,
+      "subset_acc": 0.8794871794871795,
+      "per_label_f1": {
+        "problem_report": 0.9104665825977302,
+        "feature_request": 0.7857142857142857,
+        "irrelevant": 0.9511111111111111
+      },
+      "problem_report_recall": 0.9139240506329114,
+      "missed_problem_reports": 34,
+      "escalation_rate": 0.09572649572649573,
+      "ece": 0.03399723470553277,
+      "macro_f1_with_human_review_simulated": 0.9276097526789805,
+      "subset_acc_with_human_review_simulated": 0.9333333333333333
+    },
+    "test_distilbert_only": {
+      "macro_f1": 0.8672034879917495,
+      "subset_acc": 0.8769230769230769,
+      "per_label_f1": {
+        "problem_report": 0.8969072164948454,
+        "feature_request": 0.7578947368421053,
+        "irrelevant": 0.9468085106382979
+      },
+      "missed_problem_reports": 47
+    },
+    "mcnemar_vs_distilbert": {
+      "ensemble_right_distilbert_wrong": 16,
+      "distilbert_right_ensemble_wrong": 13,
+      "p_value": 0.711071103811264
+    },
+    "band_options": [
+      {
+        "band": [
+          0.25,
+          0.75
+        ],
+        "oof_escalation": 0.23776941498460485,
+        "test_escalation": 0.23846153846153847,
+        "test_subset_acc_kept": 0.9663299663299664,
+        "test_subset_acc_escalated": 0.6021505376344086
+      },
+      {
+        "band": [
+          0.3,
+          0.7
+        ],
+        "oof_escalation": 0.1861101607937051,
+        "test_escalation": 0.18376068376068377,
+        "test_subset_acc_kept": 0.9528795811518325,
+        "test_subset_acc_escalated": 0.5534883720930233
+      },
+      {
+        "band": [
+          0.35,
+          0.65
+        ],
+        "oof_escalation": 0.13941156346219638,
+        "test_escalation": 0.14102564102564102,
+        "test_subset_acc_kept": 0.9412935323383085,
+        "test_subset_acc_escalated": 0.503030303030303
+      },
+      {
+        "band": [
+          0.4,
+          0.6
+        ],
+        "oof_escalation": 0.09801573725624359,
+        "test_escalation": 0.09572649572649573,
+        "test_subset_acc_kept": 0.9262759924385633,
+        "test_subset_acc_escalated": 0.4375
+      },
+      {
+        "band": [
+          0.45,
+          0.55
+        ],
+        "oof_escalation": 0.04943551146082792,
+        "test_escalation": 0.04786324786324787,
+        "test_subset_acc_kept": 0.90754039497307,
+        "test_subset_acc_escalated": 0.32142857142857145
+      }
+    ],
+    "chosen_band": [
+      0.4,
+      0.6
+    ]
+  }
+}

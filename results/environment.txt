@@ -1,0 +1,16 @@
+python 3.13.16 | Linux-6.18.44-fc-v180-x86_64-with-glibc2.39
+sklearn 1.9.1
+pandas 3.0.5
+numpy 2.5.3
+scipy 1.18.1
+torch 2.15.0+cpu
+transformers 5.21.0
+shap 0.54.1
+fastapi 0.162.0
+cpu threads 2
+sha256 0ade8dea1c6dd6b7 data/raw/Garmin Connect.en.csv
+sha256 1ee5af06755b7e7a data/raw/Huawei Health.en.csv
+sha256 8c52486b6ca9cffd data/raw/Samsung Health.en.csv
+sha256 9fcb5be5d6b493bd data/processed/reviews_clean_split.csv
+sha256 7589176ee73de3ca models/distilbert_best/model.safetensors
+sha256 816832bfe45b6013 models/tfidf_tuned.joblib

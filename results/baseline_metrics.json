@@ -1,0 +1,98 @@
+{
+  "model": "tfidf_word_1-2gram + one_vs_rest_logreg (class_weight=balanced, C=1.0)",
+  "cleaning": {
+    "rows_raw": 6000,
+    "unlabeled_fixed": 2,
+    "still_unlabeled": 0,
+    "duplicates_removed": 154,
+    "rows_clean": 5846
+  },
+  "n_train": 4676,
+  "n_test": 1170,
+  "reference": {
+    "majority": 0.0,
+    "random_stratified": 0.3399989894700508
+  },
+  "cv_macro_f1_mean": 0.8295940188052381,
+  "cv_macro_f1_std": 0.0075919926874810926,
+  "test": {
+    "problem_report": {
+      "precision": 0.7901785714285714,
+      "recall": 0.8962025316455696,
+      "f1": 0.8398576512455516,
+      "support": 395
+    },
+    "feature_request": {
+      "precision": 0.6109324758842444,
+      "recall": 0.8296943231441049,
+      "f1": 0.7037037037037037,
+      "support": 229
+    },
+    "irrelevant": {
+      "precision": 0.9298561151079137,
+      "recall": 0.9118165784832452,
+      "f1": 0.9207479964381122,
+      "support": 567
+    },
+    "macro_f1": 0.8214364504624557,
+    "micro_f1": 0.8467677573822825,
+    "subset_accuracy": 0.7606837606837606,
+    "hamming_loss": 0.1094017094017094
+  },
+  "cross_app": [
+    {
+      "held_out_app": "Garmin Connect",
+      "n_test": 2000,
+      "macro_f1": 0.78,
+      "problem_report_f1": 0.861,
+      "feature_request_f1": 0.581,
+      "irrelevant_f1": 0.898
+    },
+    {
+      "held_out_app": "Huawei Health",
+      "n_test": 1946,
+      "macro_f1": 0.788,
+      "problem_report_f1": 0.852,
+      "feature_request_f1": 0.628,
+      "irrelevant_f1": 0.883
+    },
+    {
+      "held_out_app": "Samsung Health",
+      "n_test": 1900,
+      "macro_f1": 0.805,
+      "problem_report_f1": 0.766,
+      "feature_request_f1": 0.735,
+      "irrelevant_f1": 0.915
+    }
+  ],
+  "slices": [
+    {
+      "slice": "Garmin Connect",
+      "n": 401,
+      "macro_f1": 0.809
+    },
+    {
+      "slice": "Huawei Health",
+      "n": 389,
+      "macro_f1": 0.804
+    },
+    {
+      "slice": "Samsung Health",
+      "n": 380,
+      "macro_f1": 0.828
+    },
+    {
+      "slice": "<= 3 words",
+      "n": 206,
+      "macro_f1": 0.665
+    },
+    {
+      "slice": "> 3 words",
+      "n": 964,
+      "macro_f1": 0.816
+    }
+  ],
+  "train_seconds": 0.3278136849999953,
+  "inference_seconds_per_1000": 0.05216503760684587,
+  "api_cost_usd_per_1000": 0.0
+}

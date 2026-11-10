@@ -1,0 +1,21 @@
+shape (6000, 8)
+columns ['data', 'score', 'thumbsUpCount', 'problem_report', 'feature_request', 'irrelevant', 'ori_lang', 'app']
+missing values {'data': 0, 'score': 0, 'thumbsUpCount': 0, 'problem_report': 0, 'feature_request': 0, 'irrelevant': 0, 'ori_lang': 0, 'app': 0}
+
+label counts by app
+                 problem_report  feature_request  irrelevant
+app                                                        
+Garmin Connect             586              211        1232
+Huawei Health              877              413         764
+Samsung Health             503              525         990
+label totals {'problem_report': 1966, 'feature_request': 1149, 'irrelevant': 2986}
+labels per review {1: 5895, 2: 103, 0: 2}
+
+words per review {'count': 6000.0, 'mean': 20.0, 'std': 22.6, 'min': 1.0, '25%': 5.0, '50%': 12.0, '75%': 27.0, 'max': 355.0}
+reviews with <=3 words 1150 label mix {'problem_report': 33, 'feature_request': 19, 'irrelevant': 1098}
+
+duplicate rows (beyond first) 154 duplicate groups 117 groups spanning >1 app 117
+star rating distribution {1: 1507, 2: 470, 3: 606, 4: 842, 5: 2575}
+mean rating by label {'problem_report': np.float64(1.92), 'feature_request': np.float64(2.82), 'irrelevant': np.float64(4.6)}
+possible emails 0 urls 0 phone-like 1
+emoji/non-ASCII-heavy reviews 68

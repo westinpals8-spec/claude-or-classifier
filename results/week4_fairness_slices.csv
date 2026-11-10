@@ -1,0 +1,8 @@
+slice,n,n_problem_reports,tfidf_macro_f1,tfidf_PR_miss_rate,distilbert_macro_f1,distilbert_PR_miss_rate
+app: Garmin Connect,401,118,0.818,0.119,0.859,0.11
+app: Huawei Health,389,176,0.832,0.062,0.821,0.17
+app: Samsung Health,380,101,0.863,0.099,0.899,0.129
+length <= 3 words,206,7,0.668,0.286,0.873,0.0
+length 4-20 words,540,148,0.831,0.108,0.85,0.122
+length > 20 words,424,240,0.813,0.071,0.824,0.158
+emoji / non-English heavy,11,0,0.333,0.0,0.333,0.0

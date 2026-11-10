@@ -1,0 +1,158 @@
+{
+  "fp32": {
+    "macro_f1": 0.8672034879917495,
+    "problem_report_recall": 0.8810126582278481,
+    "missed_problem_reports": 47,
+    "size_mb": 267.863975,
+    "sec_per_1000": 41.52854766837607
+  },
+  "int8_dynamic": {
+    "macro_f1": 0.8662375771522903,
+    "problem_report_recall": 0.9088607594936708,
+    "missed_problem_reports": 36,
+    "size_mb": 138.716095,
+    "sec_per_1000": 10.142165641025647
+  },
+  "bands": [
+    {
+      "band": [
+        0.4,
+        0.6
+      ],
+      "split": "val",
+      "escalation_rate": 0.03418803418803419,
+      "subset_acc_confident": 0.9092920353982301,
+      "subset_acc_escalated_local": 0.3125
+    },
+    {
+      "band": [
+        0.4,
+        0.6
+      ],
+      "split": "test",
+      "escalation_rate": 0.02564102564102564,
+      "subset_acc_confident": 0.8929824561403509,
+      "subset_acc_escalated_local": 0.26666666666666666
+    },
+    {
+      "band": [
+        0.3,
+        0.7
+      ],
+      "split": "val",
+      "escalation_rate": 0.07264957264957266,
+      "subset_acc_confident": 0.9262672811059908,
+      "subset_acc_escalated_local": 0.4117647058823529
+    },
+    {
+      "band": [
+        0.3,
+        0.7
+      ],
+      "split": "test",
+      "escalation_rate": 0.04871794871794872,
+      "subset_acc_confident": 0.9056603773584906,
+      "subset_acc_escalated_local": 0.3157894736842105
+    },
+    {
+      "band": [
+        0.25,
+        0.75
+      ],
+      "split": "val",
+      "escalation_rate": 0.07692307692307693,
+      "subset_acc_confident": 0.9305555555555556,
+      "subset_acc_escalated_local": 0.3888888888888889
+    },
+    {
+      "band": [
+        0.25,
+        0.75
+      ],
+      "split": "test",
+      "escalation_rate": 0.06153846153846154,
+      "subset_acc_confident": 0.9116575591985429,
+      "subset_acc_escalated_local": 0.3472222222222222
+    },
+    {
+      "band": [
+        0.2,
+        0.8
+      ],
+      "split": "val",
+      "escalation_rate": 0.08974358974358974,
+      "subset_acc_confident": 0.9366197183098591,
+      "subset_acc_escalated_local": 0.40476190476190477
+    },
+    {
+      "band": [
+        0.2,
+        0.8
+      ],
+      "split": "test",
+      "escalation_rate": 0.07435897435897436,
+      "subset_acc_confident": 0.9187442289935365,
+      "subset_acc_escalated_local": 0.3563218390804598
+    },
+    {
+      "band": [
+        0.1,
+        0.9
+      ],
+      "split": "val",
+      "escalation_rate": 0.10897435897435898,
+      "subset_acc_confident": 0.9424460431654677,
+      "subset_acc_escalated_local": 0.45098039215686275
+    },
+    {
+      "band": [
+        0.1,
+        0.9
+      ],
+      "split": "test",
+      "escalation_rate": 0.11452991452991453,
+      "subset_acc_confident": 0.9324324324324325,
+      "subset_acc_escalated_local": 0.44776119402985076
+    }
+  ],
+  "cost_estimate": {
+    "approx_input_tokens_per_review": 163.75940170940171,
+    "escalation_rate_test": 0.06153846153846154,
+    "all_reviews_to_claude_usd_per_1000": {
+      "15_output_tokens": 0.023875940170940173,
+      "200_output_tokens": 0.11637594017094018
+    },
+    "cascade_usd_per_1000": {
+      "15_output_tokens": 0.0014692886259040105,
+      "200_output_tokens": 0.007161596318211703
+    },
+    "batch_api_discount": 0.5
+  },
+  "api_latency_ms": {
+    "single_p50": 41.0269415000073,
+    "single_p95": 74.38753389998851,
+    "batch32_per_review_mean": 53.70638166406283
+  },
+  "security": {
+    "no_key_status": 401,
+    "wrong_key_status": 401,
+    "too_long_status": 422,
+    "too_many_status": 422,
+    "prompt_injection_result": {
+      "id": null,
+      "labels": [
+        "problem_report"
+      ],
+      "probabilities": {
+        "problem_report": 0.9883,
+        "feature_request": 0.0176,
+        "irrelevant": 0.005
+      },
+      "route": "local",
+      "model": "distilbert-feedback-triage-v1 (lr 5e-5, 3 epochs, 2026-10-28)",
+      "latency_ms": 47.74,
+      "note": ""
+    }
+  },
+  "peak_rss_mb": 1316.453125
+}

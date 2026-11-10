@@ -1,0 +1,8 @@
+{
+  "temperatures": {
+    "problem_report": 1.45,
+    "feature_request": 1.45,
+    "irrelevant": 1.35
+  },
+  "fit_on": "out-of-fold DistilBERT predictions, CV folds 0-3 (Week 6)"
+}

@@ -1,0 +1,19 @@
+{
+  "service_version": "feedback-triage-v1.1 (calibrated DistilBERT + TF-IDF ensemble)",
+  "ensemble_weight": 0.5,
+  "band": [
+    0.4,
+    0.6
+  ],
+  "macro_f1": 0.8830408781030097,
+  "subset_acc": 0.8846153846153846,
+  "missed_problem_reports": 29,
+  "routes": {
+    "local": 1058,
+    "human_review": 112
+  },
+  "escalation_rate": 0.09572649572649573,
+  "reviews_given_fallback_label": 11,
+  "identical_to_offline_recomputation": true,
+  "seconds_per_1000_reviews_cpu": 17.32599062478639
+}

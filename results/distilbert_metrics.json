@@ -1,0 +1,52 @@
+{
+  "model": "distilbert-base-uncased",
+  "max_len": 128,
+  "batch": 16,
+  "epochs": 3,
+  "selected_run": {
+    "name": "lr5e-5",
+    "lr": 5e-05,
+    "pos_weight": false,
+    "best_epoch": 3,
+    "best_val_macro_f1": 0.8892339544513458,
+    "train_minutes": 20.042381920183335
+  },
+  "thresholds": {
+    "problem_report": 0.8,
+    "feature_request": 0.475,
+    "irrelevant": 0.2
+  },
+  "test_thr05": {
+    "macro_f1": 0.8665181227740343,
+    "micro_f1": 0.8926315789473684,
+    "subset_acc": 0.8777777777777778,
+    "hamming": 0.07264957264957266,
+    "problem_report_p": 0.9133858267716536,
+    "problem_report_r": 0.8810126582278481,
+    "problem_report_f1": 0.8969072164948454,
+    "feature_request_p": 0.7355371900826446,
+    "feature_request_r": 0.777292576419214,
+    "feature_request_f1": 0.7558386411889597,
+    "irrelevant_p": 0.9518716577540107,
+    "irrelevant_r": 0.9417989417989417,
+    "irrelevant_f1": 0.9468085106382979
+  },
+  "test_tuned_thr": {
+    "macro_f1": 0.8651408450704224,
+    "micro_f1": 0.8907633909742725,
+    "subset_acc": 0.8752136752136752,
+    "hamming": 0.0737891737891738,
+    "problem_report_p": 0.9287671232876712,
+    "problem_report_r": 0.8582278481012658,
+    "problem_report_f1": 0.8921052631578947,
+    "feature_request_p": 0.7317073170731707,
+    "feature_request_r": 0.7860262008733624,
+    "feature_request_f1": 0.7578947368421053,
+    "irrelevant_p": 0.9437609841827768,
+    "irrelevant_r": 0.9470899470899471,
+    "irrelevant_f1": 0.9454225352112676
+  },
+  "inference_seconds_per_1000_cpu": 16.49914956752139,
+  "api_cost_usd_per_1000": 0.0,
+  "hardware": "CPU only, 2 threads"
+}

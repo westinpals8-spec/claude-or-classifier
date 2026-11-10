@@ -1,0 +1,26 @@
+oof_row_sample_seed,text_start,given_labels,my_judgment
+3,"You guys just got to improve the auto sync",FR,ambiguous
+3,"A very handy app but occasionally it's slow to connect",FR,annotation error (problem report)
+3,"Very good for track your daily activities, but you can't challenge friend",FR,ambiguous
+3,"Adding weight manauly after the update has become a hassle",PR,model error
+3,"Intermittent Fasting is an important practice",PR+FR,model error
+3,"Add where we can vs multiple friends at a time",IRR,annotation error (feature request)
+3,"This app now needs too many and intrusive permissions",PR+FR,ambiguous
+3,"to be honnest ive never updated or opened it",FR,ambiguous
+3,"I like the Garmin ecosystem and while there are a few bugs",PR,ambiguous
+3,"all I want is to be able to edit the workouts",PR,annotation error (missing feature request)
+3,"The app idea is good, but implementation could be better: often gets stuck",PR,model error
+3,"Don't update if you haven't already. Each update continues to subtract",FR,ambiguous
+3,"Adding photos for watch faces not available in India. Please fix it soon.",PR,ambiguous
+3,"How I can't add huwei scale 3 to the app",PR,model error
+3,"It downgraded but I use it all the time",IRR,ambiguous
+3,"A handy, all-in-one-place tool to track most anything",FR,ambiguous
+3,"After ensuring I had my correct garmin account",IRR,ambiguous
+3,"More good alam settings",FR,model error
+3,"They seem to keep removing features, like O2 saturation",IRR,annotation error (feature request)
+3,"[Honor Band watch] When I have to turn off my phone",IRR,model error
+3,"Doesn't really doesn't break down categories the way my garmin does",FR,ambiguous
+3,"whatsaap not noticfction show",FR,annotation error (problem report)
+3,"Does not work on a phone not based on Huawei OS",FR,annotation error (problem report)
+3,"Needs widgets!",FR,model error
+3,"Every time I place my phone on the table",FR,annotation error (problem report)
